@@ -16,7 +16,7 @@ export default function About() {
                         I’m also computer engineering student at Cukurova University.
                     </p>
                 </div>
-               {/* TEST GPG config  */}
+               {/* TEST GPG config 2 */}
             </div>
         </div>
     )
