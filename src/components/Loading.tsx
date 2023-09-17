@@ -1,8 +1,23 @@
 
+import { motion } from 'framer-motion';
+import { useLayoutEffect, useState } from 'react';
+// @ts-ignore
 import DrawSVG from 'react-svg-drawing';
 
+
+
 function Loading() {
-    return <div className="absolute bg-bgBlack w-full h-full top-0 grid place-items-center left-0 animate-go animate-1 z-5">
+    const [loading, setLoading] = useState(true)
+
+    useLayoutEffect(() => {
+        setTimeout(() => {
+            setLoading(false)
+        }, 3000);
+    }, [])
+
+    return loading ? <motion.div
+
+        className="absolute bg-bgBlack w-full h-full top-0 grid place-items-center left-0 animate-go animate-1 z-[20]">
         <DrawSVG
             strokeWidth="2" stroke="#B2FF9E" fill="#B2FF9E" loop={false} duration={3000}>
             <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
@@ -11,7 +26,7 @@ function Loading() {
                 <path d="M43.0782 55.6843V39.956C43.0782 38.1514 43.7577 36.3934 45.1167 34.6822C46.9181 32.4108 49.3517 31.2596 52.4173 31.2285V37.8091C51.0899 37.8402 50.2366 38.447 49.8573 39.6293C49.7941 39.7538 49.7625 39.8627 49.7625 39.956V55.6843C49.7625 56.1821 50.0311 56.6644 50.5684 57.1311C51.0741 57.5667 51.6904 57.7845 52.4173 57.7845V64.3652C48.8776 64.3652 46.207 62.9028 44.4056 59.978C43.5206 58.4846 43.0782 57.0533 43.0782 55.6843ZM54.9772 64.3652V57.7845C54.9772 57.7845 55.3407 57.6445 56.0676 57.3644C56.5101 57.0533 56.8103 56.7266 56.9683 56.3843C57.1263 55.9799 57.2054 55.4042 57.2054 54.6575V54.0975L63.7475 55.6376C63.7475 58.3445 62.6413 60.5848 60.429 62.3583C58.754 63.6962 56.9367 64.3652 54.9772 64.3652ZM54.9772 37.8091V31.2285C57.2844 31.2285 59.3703 32.2241 61.2349 34.2154C62.91 36.0201 63.7475 37.9647 63.7475 40.0494L57.2054 41.7295V41.0295C57.2054 40.2516 57.1263 39.676 56.9683 39.3026C56.8419 38.9915 56.6049 38.7114 56.2572 38.4625C55.9412 38.2136 55.6567 38.0425 55.4039 37.9491L54.9772 37.8091Z" />
             </svg>
         </DrawSVG>
-    </div>
+    </motion.div> : <></>
 }
 
 export default Loading

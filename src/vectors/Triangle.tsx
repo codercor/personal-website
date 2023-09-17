@@ -2,18 +2,8 @@ import anime from 'animejs';
 import React, { useEffect } from 'react'
 
 
-export default function Triangle(props: any) {
-    // useEffect(() => {
-    //     anime({
-    //         targets: 'triangle-path',
-    //         strokeDashoffset: [anime.setDashoffset, 0],
-    //         easing: 'easeInOutSine',
-    //         duration: 1500,
-    //         delay: function (el, i) { return i * 250 },
-    //         direction: 'alternate',
-    //         loop: true
-    //     });
-    // }, []);
+export default function Triangle() {
+   
     return (
         <div>
             <svg width="669" className='animate-triangleRotate origin-[50%_40%] absolute left-[-100%]' height="594" xmlns="http://www.w3.org/2000/svg">
