@@ -1,19 +1,22 @@
-<!doctype html>
-<html lang="en" data-theme="paper">
+<!DOCTYPE html>
+<html lang="en" data-theme="night">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="theme-color" content="#f0ede4">
-    <meta name="description" content="Mustafa Çor is a software and data engineer building production data platforms, backend systems, and product interfaces.">
+    <meta name="theme-color" content="#12140f">
+    <meta name="description" content="Mustafa Çor is a software and data engineer building dependable data platforms, backend systems, and product interfaces.">
     <meta property="og:title" content="Mustafa Çor — Software & Data Engineer">
-    <meta property="og:description" content="Production-minded engineering across data platforms, backend systems, and product interfaces.">
+    <meta property="og:description" content="Data platforms, backend systems, and product software built with an operator's eye.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://codercor.com">
-    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="https://codercor.com/avatar-pixel-v1.png">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://codercor.com">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="/fonts/bricolage-regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/fonts/bricolage-heavy.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="stylesheet" href="/styles.css">
-    <title>Mustafa Çor — Software & Data Engineer</title>
+    <title>Mustafa Çor — Software &amp; Data Engineer</title>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -30,215 +33,229 @@
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
+    <div class="screen-noise" aria-hidden="true"></div>
 
-    <div class="page-grid" aria-hidden="true"></div>
+    <div class="boot-bar" role="group" aria-label="Site status">
+      <span class="boot-path">codercor://workstation</span>
+      <span class="boot-center"><i></i> edge node online</span>
+      <time data-clock datetime="">IST --:--:--</time>
+    </div>
 
     <header class="site-header">
-      <a class="wordmark" href="#top" aria-label="Mustafa Çor, home">MÇ<span>/</span>01</a>
+      <a class="wordmark" href="#top" aria-label="Mustafa Çor, home">
+        <span class="wordmark-mark">MÇ</span>
+        <span class="wordmark-name">MUSTAFA ÇOR<br><small>SOFTWARE / DATA</small></span>
+      </a>
       <nav aria-label="Primary navigation">
-        <a href="#work">Work</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
+        <a href="#work"><span>01</span> Artifacts</a>
+        <a href="#experience"><span>02</span> Log</a>
+        <a href="#stack"><span>03</span> System</a>
+        <a href="#contact"><span>04</span> Contact</a>
       </nav>
-      <button class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
-        <span aria-hidden="true">◐</span>
-        <span class="theme-label">Invert</span>
+      <button class="theme-toggle" type="button" aria-label="Switch to print mode" aria-pressed="false">
+        <span class="theme-glyph" aria-hidden="true">◧</span>
+        <span data-theme-label>print mode</span>
       </button>
     </header>
 
     <main id="main">
       <section class="hero" id="top" aria-labelledby="hero-title">
-        <div class="hero-copy reveal" style="--delay: 0">
-          <p class="kicker"><span class="status-dot"></span> Istanbul / Available globally</p>
-          <h1 id="hero-title">Software that survives contact with <em>production.</em></h1>
-          <p class="hero-lead">
-            I’m Mustafa — a software and data engineer turning messy requirements into dependable systems,
-            from Snowflake models and delivery pipelines to backend services and product interfaces.
+        <div class="hero-copy">
+          <div class="prompt reveal delay-0">
+            <span>mustafa@codercor</span>:~$ whoami<span class="cursor" aria-hidden="true"></span>
+          </div>
+          <p class="role-line reveal delay-1">Software &amp; Data Engineer · Istanbul</p>
+          <h1 id="hero-title" class="reveal delay-2">
+            I build the machinery <em>behind the interface.</em>
+          </h1>
+          <p class="hero-lead reveal delay-3">
+            Data platforms, backend services, delivery systems, and the product layer on top.
+            I turn vague requirements into software teams can inspect, operate, and change.
           </p>
-          <div class="hero-actions">
-            <a class="primary-link" href="#work">Inspect selected work <span aria-hidden="true">↘</span></a>
-            <a class="text-link" href="https://github.com/codercor" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <div class="hero-actions reveal delay-4">
+            <a class="command-link" href="#work"><span aria-hidden="true">./</span> inspect_work</a>
+            <a class="quiet-link" href="https://github.com/codercor" target="_blank" rel="noreferrer">github.com/codercor ↗</a>
           </div>
         </div>
 
-        <aside class="hero-identity reveal" style="--delay: 1" aria-label="Profile summary">
-          <div class="portrait-frame">
-            <span class="portrait-index">FIG. 01</span>
-            <img src="/avatar.png" width="520" height="502" alt="Illustrated portrait of Mustafa Çor">
+        <aside class="portrait-window reveal delay-3" aria-label="Portrait and current role">
+          <div class="window-bar">
+            <span class="window-controls" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span>~/identity/mustafa.png</span>
+            <span>1254×1254</span>
           </div>
-          <div class="identity-note">
-            <span>Current</span>
-            <strong>Data Engineer @ Siemens</strong>
+          <figure>
+            <img src="/avatar-pixel-v1.png" width="1254" height="1254" alt="Pixel art portrait of Mustafa Çor wearing a flat cap" fetchpriority="high">
+            <figcaption><span>render_01</span><span>palette: soot / rust / phosphor</span></figcaption>
+          </figure>
+          <div class="portrait-meta">
+            <div><span>current process</span><strong>Data Engineer @ Siemens</strong></div>
+            <div><span>mode</span><strong>build / debug / ship</strong></div>
           </div>
         </aside>
 
-        <div class="live-strip reveal" style="--delay: 2" aria-label="Public engineering profile">
-          <div>
-            <span class="metric-label">Practice</span>
-            <strong>11 years</strong>
-          </div>
-          <div>
-            <span class="metric-label">Public repositories</span>
-            <strong data-github="repos">37</strong>
-          </div>
-          <div>
-            <span class="metric-label">Primary systems</span>
-            <strong>Data + Web</strong>
-          </div>
-          <div class="live-state">
-            <span class="metric-label">Public API</span>
-            <strong><span class="status-dot"></span><span data-github="state">Live</span></strong>
-          </div>
+        <div class="system-strip reveal delay-5">
+          <div><span>experience</span><strong>11 years in software</strong></div>
+          <div><span>public tree</span><strong><b data-github="repos">37</b> repositories</strong></div>
+          <div><span>latest activity</span><a data-github="latest" href="https://github.com/codercor" target="_blank" rel="noreferrer">querying github…</a></div>
+          <div><span>availability</span><strong><i class="status-light"></i> globally reachable</strong></div>
         </div>
       </section>
 
-      <section class="manifesto section-rule" aria-label="Engineering approach">
-        <p class="section-code">02 / PRINCIPLE</p>
-        <blockquote>
-          “Architecture should make the next change boring.”
-        </blockquote>
-        <p>
-          I favor explicit data contracts, observable pipelines, maintainable interfaces, and delivery paths
-          that a team can operate after the launch-day adrenaline is gone.
-        </p>
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>DATA CONTRACTS</span><b>✣</b><span>SNOWFLAKE</span><b>✣</b><span>BACKEND SYSTEMS</span><b>✣</b><span>LINUX</span><b>✣</b><span>PRODUCT CODE</span><b>✣</b><span>OBSERVABILITY</span><b>✣</b><span>DATA CONTRACTS</span><b>✣</b><span>SNOWFLAKE</span><b>✣</b><span>BACKEND SYSTEMS</span><b>✣</b><span>LINUX</span><b>✣</b><span>PRODUCT CODE</span><b>✣</b><span>OBSERVABILITY</span><b>✣</b>
+        </div>
+      </div>
+
+      <section class="manual section-shell" aria-labelledby="manual-title">
+        <div class="section-index">
+          <span>00</span>
+          <p>MAN PAGE<br>ABOUT THIS USER</p>
+        </div>
+        <div class="manual-copy reveal-on-scroll">
+          <p class="eyebrow">NAME</p>
+          <h2 id="manual-title">Software is a material.<br><em>I like seeing the grain.</em></h2>
+          <div class="manual-body">
+            <p class="eyebrow">DESCRIPTION</p>
+            <p>I care about boundaries, failure modes, and what happens at 03:00 when the clean architecture diagram meets production. The goal is not clever code. It is a system whose next change feels obvious.</p>
+          </div>
+        </div>
+        <aside class="manual-aside reveal-on-scroll" aria-label="Engineering preferences">
+          <p><span>prefer</span> explicit contracts</p>
+          <p><span>prefer</span> boring operations</p>
+          <p><span>prefer</span> useful interfaces</p>
+          <p><span>avoid</span> magic without ownership</p>
+        </aside>
       </section>
 
-      <section class="work section-rule" id="work" aria-labelledby="work-title">
-        <div class="section-heading">
-          <p class="section-code">03 / SELECTED SYSTEMS</p>
-          <h2 id="work-title">Recent public work</h2>
-          <p>Small, inspectable systems that show how I think—not polished case-study theatre.</p>
-        </div>
+      <section class="work section-shell" id="work" aria-labelledby="work-title">
+        <header class="section-header reveal-on-scroll">
+          <div class="section-index"><span>01</span><p>SELECTED<br>ARTIFACTS</p></div>
+          <div>
+            <p class="eyebrow">~/public/work</p>
+            <h2 id="work-title">Things you can inspect.</h2>
+          </div>
+          <p>Working repositories, not case-study theatre. Open the source and make up your own mind.</p>
+        </header>
 
         <div class="project-list">
-          <article class="project-row reveal-on-scroll">
-            <span class="project-number">01</span>
-            <div class="project-copy">
-              <p class="project-type">Prediction system / TypeScript + Python</p>
+          <article class="project reveal-on-scroll">
+            <div class="project-id"><span>PATCH</span><strong>001</strong></div>
+            <div class="project-main">
+              <p class="project-type">Prediction system · TypeScript / Python</p>
               <h3>CENEEE2</h3>
               <p>Server-side EV battery State of Health prediction with a Next.js interface and Python functions.</p>
             </div>
-            <div class="project-links">
-              <a href="https://ceneee2.vercel.app" target="_blank" rel="noreferrer">Live ↗</a>
-              <a href="https://github.com/codercor/CENEEE2" target="_blank" rel="noreferrer">Source ↗</a>
-            </div>
+            <div class="project-tech"><span>next.js</span><span>python</span><span>prediction</span></div>
+            <div class="project-links"><a href="https://ceneee2.vercel.app" target="_blank" rel="noreferrer">run ↗</a><a href="https://github.com/codercor/CENEEE2" target="_blank" rel="noreferrer">source ↗</a></div>
           </article>
 
-          <article class="project-row reveal-on-scroll">
-            <span class="project-number">02</span>
-            <div class="project-copy">
-              <p class="project-type">Learning product / TypeScript</p>
+          <article class="project reveal-on-scroll">
+            <div class="project-id"><span>BUILD</span><strong>002</strong></div>
+            <div class="project-main">
+              <p class="project-type">Learning product · TypeScript</p>
               <h3>English Practice Area</h3>
-              <p>A focused browser workspace for repeatable English practice, designed around active use instead of passive content.</p>
+              <p>A focused browser workspace designed around repeatable practice and active use.</p>
             </div>
-            <div class="project-links">
-              <a href="https://english-practice-area.vercel.app" target="_blank" rel="noreferrer">Live ↗</a>
-              <a href="https://github.com/codercor/english-practice-area" target="_blank" rel="noreferrer">Source ↗</a>
-            </div>
+            <div class="project-tech"><span>typescript</span><span>product</span><span>ux</span></div>
+            <div class="project-links"><a href="https://english-practice-area.vercel.app" target="_blank" rel="noreferrer">run ↗</a><a href="https://github.com/codercor/english-practice-area" target="_blank" rel="noreferrer">source ↗</a></div>
           </article>
 
-          <article class="project-row reveal-on-scroll">
-            <span class="project-number">03</span>
-            <div class="project-copy">
-              <p class="project-type">Developer tooling / Python</p>
+          <article class="project reveal-on-scroll">
+            <div class="project-id"><span>TOOL</span><strong>003</strong></div>
+            <div class="project-main">
+              <p class="project-type">Local image tooling · Python</p>
               <h3>Ollama FLUX.2 Tool</h3>
               <p>A compact Dify plugin connecting image-generation workflows to local Ollama FLUX.2 Klein models.</p>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/codercor/ollama-flux2-klein-image-tool" target="_blank" rel="noreferrer">Source ↗</a>
-            </div>
+            <div class="project-tech"><span>python</span><span>ollama</span><span>dify</span></div>
+            <div class="project-links"><a href="https://github.com/codercor/ollama-flux2-klein-image-tool" target="_blank" rel="noreferrer">source ↗</a></div>
           </article>
 
-          <article class="project-row reveal-on-scroll">
-            <span class="project-number">04</span>
-            <div class="project-copy">
-              <p class="project-type">Data practice / SQL + TypeScript</p>
+          <article class="project reveal-on-scroll">
+            <div class="project-id"><span>LAB</span><strong>004</strong></div>
+            <div class="project-main">
+              <p class="project-type">Data practice · SQL / TypeScript</p>
               <h3>SQL Practice Lab</h3>
-              <p>A hands-on environment for working through queries, data-shaping problems, and database reasoning.</p>
+              <p>A hands-on environment for queries, data-shaping problems, and database reasoning.</p>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/codercor/sql-practice-lab" target="_blank" rel="noreferrer">Source ↗</a>
-            </div>
+            <div class="project-tech"><span>sql</span><span>data</span><span>learning</span></div>
+            <div class="project-links"><a href="https://github.com/codercor/sql-practice-lab" target="_blank" rel="noreferrer">source ↗</a></div>
           </article>
         </div>
       </section>
 
-      <section class="experience section-rule" id="experience" aria-labelledby="experience-title">
-        <div class="section-heading compact">
-          <p class="section-code">04 / OPERATING HISTORY</p>
-          <h2 id="experience-title">Selected experience</h2>
-        </div>
+      <section class="experience section-shell" id="experience" aria-labelledby="experience-title">
+        <header class="section-header compact reveal-on-scroll">
+          <div class="section-index"><span>02</span><p>PROCESS<br>HISTORY</p></div>
+          <div><p class="eyebrow">git log --career</p><h2 id="experience-title">Operating history.</h2></div>
+        </header>
 
-        <ol class="timeline">
+        <ol class="log-list">
           <li class="reveal-on-scroll">
-            <div class="timeline-date">2024—NOW</div>
-            <div>
-              <h3>Data Engineer <span>Siemens</span></h3>
-              <p>Snowflake and dbt ELT pipelines, analytics-ready models, SAP CPI-DS transformations, data quality, and GitLab delivery automation.</p>
-            </div>
+            <time>2024—NOW</time><span class="log-node" aria-hidden="true"></span>
+            <div><p>HEAD → CURRENT</p><h3>Data Engineer <span>@ Siemens</span></h3><p>Snowflake and dbt ELT pipelines, analytics-ready models, SAP CPI-DS transformations, data quality, and GitLab delivery automation.</p></div>
           </li>
           <li class="reveal-on-scroll">
-            <div class="timeline-date">2022—2024</div>
-            <div>
-              <h3>Blockchain & Full-Stack Developer <span>OXS Games</span></h3>
-              <p>Web3 product features spanning smart contracts, NFT data models, deployment pipelines, and maintainable product interfaces.</p>
-            </div>
+            <time>2022—2024</time><span class="log-node" aria-hidden="true"></span>
+            <div><p>PRODUCT / BLOCKCHAIN</p><h3>Blockchain &amp; Full-Stack Developer <span>@ OXS Games</span></h3><p>Smart contracts, NFT data models, deployment pipelines, and maintainable product interfaces.</p></div>
           </li>
           <li class="reveal-on-scroll">
-            <div class="timeline-date">2022—2024</div>
-            <div>
-              <h3>Full-Stack Developer <span>Coinoxs</span></h3>
-              <p>React, Next.js, TypeScript, API integrations, and AWS serverless services for production financial technology products.</p>
-            </div>
+            <time>2022—2024</time><span class="log-node" aria-hidden="true"></span>
+            <div><p>FULL STACK</p><h3>Full-Stack Developer <span>@ Coinoxs</span></h3><p>React, Next.js, TypeScript, API integrations, and AWS serverless services for financial technology products.</p></div>
           </li>
           <li class="reveal-on-scroll">
-            <div class="timeline-date">2024</div>
-            <div>
-              <h3>Software Engineering Consultant <span>LeoFinance</span></h3>
-              <p>Remix.js product work for a HIVE-based social platform, including stateful user flows and blockchain transaction handling.</p>
-            </div>
+            <time>2024</time><span class="log-node" aria-hidden="true"></span>
+            <div><p>CONSULTING</p><h3>Software Engineering Consultant <span>@ LeoFinance</span></h3><p>Remix.js product work for a HIVE-based social platform, including stateful user flows and blockchain transactions.</p></div>
           </li>
         </ol>
       </section>
 
-      <section class="range section-rule" aria-labelledby="range-title">
-        <div class="section-heading compact">
-          <p class="section-code">05 / OPERATING RANGE</p>
-          <h2 id="range-title">Tools are implementation details.<br>These are the systems.</h2>
-        </div>
-        <div class="range-grid">
-          <div class="range-column reveal-on-scroll">
-            <span>DATA PLATFORM</span>
-            <p>Snowflake</p><p>dbt</p><p>SQL</p><p>SAP CPI-DS</p><p>Data quality</p>
-          </div>
-          <div class="range-column reveal-on-scroll">
-            <span>SERVICES & INTERFACES</span>
-            <p>TypeScript</p><p>Node.js</p><p>React / Next.js</p><p>REST APIs</p><p>Python</p>
-          </div>
-          <div class="range-column reveal-on-scroll">
-            <span>DELIVERY</span>
-            <p>GitLab CI/CD</p><p>AWS serverless</p><p>Docker</p><p>Testing</p><p>Documentation</p>
-          </div>
+      <section class="stack section-shell" id="stack" aria-labelledby="stack-title">
+        <header class="section-header reveal-on-scroll">
+          <div class="section-index"><span>03</span><p>INSTALLED<br>CAPABILITIES</p></div>
+          <div><p class="eyebrow">ls -la /usr/local/craft</p><h2 id="stack-title">Tools change.<br>The instincts stay.</h2></div>
+          <p>A practical range across the data layer, services, interfaces, and the machinery that ships them.</p>
+        </header>
+        <div class="stack-grid">
+          <section class="stack-pane reveal-on-scroll">
+            <div class="pane-title"><span>01</span><h3>/data</h3><b>drwxr-xr-x</b></div>
+            <ul><li>Snowflake</li><li>dbt</li><li>SQL</li><li>SAP CPI-DS</li><li>Data quality</li></ul>
+          </section>
+          <section class="stack-pane reveal-on-scroll">
+            <div class="pane-title"><span>02</span><h3>/services</h3><b>drwxr-xr-x</b></div>
+            <ul><li>TypeScript</li><li>Node.js</li><li>Python</li><li>REST APIs</li><li>Serverless</li></ul>
+          </section>
+          <section class="stack-pane reveal-on-scroll">
+            <div class="pane-title"><span>03</span><h3>/interface</h3><b>drwxr-xr-x</b></div>
+            <ul><li>React</li><li>Next.js</li><li>Remix</li><li>Product UI</li><li>Accessibility</li></ul>
+          </section>
+          <section class="stack-pane reveal-on-scroll">
+            <div class="pane-title"><span>04</span><h3>/ops</h3><b>drwxr-xr-x</b></div>
+            <ul><li>Linux</li><li>Docker</li><li>GitLab CI/CD</li><li>AWS</li><li>Observability</li></ul>
+          </section>
         </div>
       </section>
 
-      <section class="contact section-rule" id="contact" aria-labelledby="contact-title">
-        <p class="section-code">06 / CONTACT</p>
-        <div>
+      <section class="contact section-shell" id="contact" aria-labelledby="contact-title">
+        <div class="section-index"><span>04</span><p>OPEN<br>CHANNELS</p></div>
+        <div class="contact-copy reveal-on-scroll">
+          <p class="eyebrow">mustafa@codercor:~$ connect</p>
           <h2 id="contact-title">Bring the difficult system.</h2>
           <p>I’m interested in serious engineering work across data platforms, backend systems, and production software.</p>
         </div>
-        <div class="contact-links">
-          <a href="https://www.linkedin.com/in/codercor" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
-          <a href="https://github.com/codercor" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+        <div class="contact-links reveal-on-scroll">
+          <a href="https://github.com/codercor" target="_blank" rel="noreferrer"><span>01 / GitHub</span><b>↗</b></a>
+          <a href="https://www.linkedin.com/in/codercor" target="_blank" rel="noreferrer"><span>02 / LinkedIn</span><b>↗</b></a>
         </div>
       </section>
     </main>
 
     <footer>
-      <span>Mustafa Çor / Software & Data Engineer</span>
-      <span>Built without trackers. Served from the edge.</span>
-      <a href="#top">Back to top ↑</a>
+      <span>Mustafa Çor / Software &amp; Data Engineer</span>
+      <span>no trackers · static files · edge served</span>
+      <a href="#top">return 0; ↑</a>
     </footer>
 
     <script src="/app.js" defer></script>
