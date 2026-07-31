@@ -15,7 +15,8 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="preload" href="/fonts/bricolage-regular.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="/fonts/bricolage-heavy.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="stylesheet" href="/styles-kernel-v1.css">
+    <link rel="preload" href="/avatar-expression-strip-v1.png" as="image" fetchpriority="high">
+    <link rel="stylesheet" href="/styles-kernel-v2.css">
     <title>Mustafa Çor — Software &amp; Data Engineer</title>
     <script type="application/ld+json">
       {
@@ -47,7 +48,7 @@
         <span class="wordmark-name">MUSTAFA ÇOR<br><small>SOFTWARE / DATA</small></span>
       </a>
       <nav aria-label="Primary navigation">
-        <a href="#work"><span>01</span> Artifacts</a>
+        <a href="#work"><span>01</span> Practice</a>
         <a href="#experience"><span>02</span> Log</a>
         <a href="#stack"><span>03</span> System</a>
         <a href="#contact"><span>04</span> Contact</a>
@@ -73,20 +74,20 @@
             I turn vague requirements into software teams can inspect, operate, and change.
           </p>
           <div class="hero-actions reveal delay-4">
-            <a class="command-link" href="#work"><span aria-hidden="true">./</span> inspect_work</a>
-            <a class="quiet-link" href="https://github.com/codercor" target="_blank" rel="noreferrer">github.com/codercor ↗</a>
+            <a class="command-link" href="#work"><span aria-hidden="true">./</span> inspect_practice</a>
+            <a class="quiet-link" href="#experience">trace operating history ↓</a>
           </div>
         </div>
 
         <aside class="portrait-window reveal delay-3" aria-label="Portrait and current role">
           <div class="window-bar">
             <span class="window-controls" aria-hidden="true"><i></i><i></i><i></i></span>
-            <span>~/identity/mustafa.png</span>
-            <span>1254×1254</span>
+            <span>~/identity/mustafa.sprite</span>
+            <span>04 FRAMES</span>
           </div>
           <figure>
-            <img src="/avatar-pixel-v1.png" width="1254" height="1254" alt="Pixel art portrait of Mustafa Çor wearing a flat cap" fetchpriority="high">
-            <figcaption><span>render_01</span><span>palette: soot / rust / phosphor</span></figcaption>
+            <div class="portrait-sprite" role="img" aria-label="Animated pixel art portrait of Mustafa Çor wearing a flat cap"></div>
+            <figcaption><span>facial_daemon</span><span>blink / scan / speak</span></figcaption>
           </figure>
           <div class="portrait-meta">
             <div><span>current process</span><strong>Data Engineer @ Siemens</strong></div>
@@ -96,8 +97,8 @@
 
         <div class="system-strip reveal delay-5">
           <div><span>experience</span><strong>11 years in software</strong></div>
-          <div><span>public tree</span><strong><b data-github="repos">37</b> repositories</strong></div>
-          <div><span>latest activity</span><a data-github="latest" href="https://github.com/codercor" target="_blank" rel="noreferrer">querying github…</a></div>
+          <div><span>current process</span><strong>Data Engineer @ Siemens</strong></div>
+          <div><span>operating range</span><strong>Data / Backend / Product</strong></div>
           <div><span>availability</span><strong><i class="status-light"></i> globally reachable</strong></div>
         </div>
       </section>
@@ -131,57 +132,53 @@
 
       <section class="work section-shell" id="work" aria-labelledby="work-title">
         <header class="section-header reveal-on-scroll">
-          <div class="section-index"><span>01</span><p>SELECTED<br>ARTIFACTS</p></div>
+          <div class="section-index"><span>01</span><p>ENGINEERING<br>PRACTICE</p></div>
           <div>
-            <p class="eyebrow">~/public/work</p>
-            <h2 id="work-title">Things you can inspect.</h2>
+            <p class="eyebrow">~/work/problems</p>
+            <h2 id="work-title">Problems worth solving.</h2>
           </div>
-          <p>Working repositories, not case-study theatre. Open the source and make up your own mind.</p>
+          <p>The parts of software I keep coming back to: ambiguity, boundaries, failure, and change.</p>
         </header>
 
-        <div class="project-list">
-          <article class="project reveal-on-scroll">
-            <div class="project-id"><span>PATCH</span><strong>001</strong></div>
-            <div class="project-main">
-              <p class="project-type">Prediction system · TypeScript / Python</p>
-              <h3>CENEEE2</h3>
-              <p>Server-side EV battery State of Health prediction with a Next.js interface and Python functions.</p>
+        <div class="problem-list">
+          <article class="problem reveal-on-scroll">
+            <div class="problem-id"><span>01</span><strong>DATA</strong></div>
+            <div class="problem-main">
+              <p class="problem-signal">When the source of truth is not obvious</p>
+              <h3>Make messy data dependable.</h3>
+              <p>Shape operational data into models people can trust: explicit contracts, deliberate transformations, tests that fail loudly, and ownership that survives hand-offs.</p>
             </div>
-            <div class="project-tech"><span>next.js</span><span>python</span><span>prediction</span></div>
-            <div class="project-links"><a href="https://ceneee2.vercel.app" target="_blank" rel="noreferrer">run ↗</a><a href="https://github.com/codercor/CENEEE2" target="_blank" rel="noreferrer">source ↗</a></div>
+            <div class="problem-rules"><span>contracts</span><span>lineage</span><span>quality</span></div>
           </article>
 
-          <article class="project reveal-on-scroll">
-            <div class="project-id"><span>BUILD</span><strong>002</strong></div>
-            <div class="project-main">
-              <p class="project-type">Learning product · TypeScript</p>
-              <h3>English Practice Area</h3>
-              <p>A focused browser workspace designed around repeatable practice and active use.</p>
+          <article class="problem reveal-on-scroll">
+            <div class="problem-id"><span>02</span><strong>SERVICES</strong></div>
+            <div class="problem-main">
+              <p class="problem-signal">Before the happy path meets production</p>
+              <h3>Put the failure modes on the table.</h3>
+              <p>Design services around retries, idempotency, useful boundaries, and observability before ordinary traffic turns into production archaeology.</p>
             </div>
-            <div class="project-tech"><span>typescript</span><span>product</span><span>ux</span></div>
-            <div class="project-links"><a href="https://english-practice-area.vercel.app" target="_blank" rel="noreferrer">run ↗</a><a href="https://github.com/codercor/english-practice-area" target="_blank" rel="noreferrer">source ↗</a></div>
+            <div class="problem-rules"><span>idempotency</span><span>API boundaries</span><span>observability</span></div>
           </article>
 
-          <article class="project reveal-on-scroll">
-            <div class="project-id"><span>TOOL</span><strong>003</strong></div>
-            <div class="project-main">
-              <p class="project-type">Local image tooling · Python</p>
-              <h3>Ollama FLUX.2 Tool</h3>
-              <p>A compact Dify plugin connecting image-generation workflows to local Ollama FLUX.2 Klein models.</p>
+          <article class="problem reveal-on-scroll">
+            <div class="problem-id"><span>03</span><strong>PRODUCT</strong></div>
+            <div class="problem-main">
+              <p class="problem-signal">When the domain refuses to stay simple</p>
+              <h3>Turn complicated rules into calm interfaces.</h3>
+              <p>Translate stateful product logic into interfaces that explain themselves, keep complexity behind the right boundaries, and remain maintainable.</p>
             </div>
-            <div class="project-tech"><span>python</span><span>ollama</span><span>dify</span></div>
-            <div class="project-links"><a href="https://github.com/codercor/ollama-flux2-klein-image-tool" target="_blank" rel="noreferrer">source ↗</a></div>
+            <div class="problem-rules"><span>state</span><span>types</span><span>accessibility</span></div>
           </article>
 
-          <article class="project reveal-on-scroll">
-            <div class="project-id"><span>LAB</span><strong>004</strong></div>
-            <div class="project-main">
-              <p class="project-type">Data practice · SQL / TypeScript</p>
-              <h3>SQL Practice Lab</h3>
-              <p>A hands-on environment for queries, data-shaping problems, and database reasoning.</p>
+          <article class="problem reveal-on-scroll">
+            <div class="problem-id"><span>04</span><strong>DELIVERY</strong></div>
+            <div class="problem-main">
+              <p class="problem-signal">When change needs to become routine</p>
+              <h3>Make shipping uneventful.</h3>
+              <p>Build release paths that are repeatable, inspectable, and boring enough for teams to change systems without launch-day heroics.</p>
             </div>
-            <div class="project-tech"><span>sql</span><span>data</span><span>learning</span></div>
-            <div class="project-links"><a href="https://github.com/codercor/sql-practice-lab" target="_blank" rel="noreferrer">source ↗</a></div>
+            <div class="problem-rules"><span>CI/CD</span><span>containers</span><span>documentation</span></div>
           </article>
         </div>
       </section>
@@ -258,6 +255,6 @@
       <a href="#top">return 0; ↑</a>
     </footer>
 
-    <script src="/app-kernel-v1.js" defer></script>
+    <script src="/app-kernel-v2.js" defer></script>
   </body>
 </html>

@@ -49,31 +49,3 @@ const observer = new IntersectionObserver((entries) => {
 }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
 
 observedElements.forEach((element) => observer.observe(element));
-
-const repoCount = document.querySelector('[data-github="repos"]');
-const latestRepoLink = document.querySelector('[data-github="latest"]');
-
-Promise.all([
-  fetch('https://api.github.com/users/codercor', {
-    headers: { Accept: 'application/vnd.github+json' }
-  }),
-  fetch('https://api.github.com/users/codercor/repos?sort=pushed&per_page=12', {
-    headers: { Accept: 'application/vnd.github+json' }
-  })
-])
-  .then(async ([profileResponse, reposResponse]) => {
-    if (!profileResponse.ok || !reposResponse.ok) throw new Error('GitHub profile unavailable');
-    return Promise.all([profileResponse.json(), reposResponse.json()]);
-  })
-  .then(([profile, repos]) => {
-    repoCount.textContent = String(profile.public_repos);
-
-    const latestRepo = repos.find((repo) => !repo.fork && !repo.archived);
-    if (!latestRepo) return;
-
-    latestRepoLink.textContent = `${latestRepo.name} ↗`;
-    latestRepoLink.href = latestRepo.html_url;
-  })
-  .catch(() => {
-    latestRepoLink.textContent = 'github profile ↗';
-  });
